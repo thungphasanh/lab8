@@ -1,0 +1,35 @@
+
+<form #myForm="ngForm" (ngSubmit)="onLogin(myForm.value)">
+    <div class="overlay">
+        <div class="abc">
+            <div class="con">
+                <header class="head-form">
+                    <h2>Log In</h2>
+                    <p>login here using your username and password</p>
+                </header>
+                <br>
+                <div class="field-set text-center">
+                    <input type="email" id="email" name="email" ngModel required email #email="ngModel" placeholder="Email">
+                    <div style="color:red" *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors?.['required']">Vui lòng nhập email</div>
+                        <div *ngIf="email.errors?.['email']">Vui lòng nhập đúng định dạng email</div>
+                    </div>
+                    <br>
+                    <input type="password" id="password" name="password" ngModel required #password="ngModel" placeholder="Password">
+                    <div style="color:red" *ngIf="password.invalid && (password.dirty || password.touched)">
+                        Vui lòng nhập password
+                    </div>
+                    <br>
+                    <button type="submit" [disabled]="myForm.invalid" class="log-in"> Đăng Nhập </button>
+                </div>
+                <div class="other">
+                    <button class="btn submits frgt-pass">Forgot Password</button>
+                    <a href=""><button class="btn submits sign-up">Đăng Ký
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

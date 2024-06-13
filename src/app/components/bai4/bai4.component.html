@@ -1,0 +1,29 @@
+<hr>
+<h2>bai 4</h2>
+<div>
+  <h2>Sản Phẩm Yêu Thích</h2>
+</div>
+<div id="listSP" class="d-flex flex-wrap">
+  {{ renderSP() }}
+</div>
+<input type="text" [(ngModel)]="seach" placeholder="tìm kiếm" (input)="seachSP()">
+<table class="table table-hover table-striped text-center">
+  <thead>
+    <th>ID</th>
+    <th>Hình Ảnh</th>
+    <th>Tên Sản Phẩm</th>
+    <th>Giá Sản phẩm</th>
+    <th>Ngày</th>
+    <th>Đánh Giá</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sp of products">
+      <td>{{sp.id}}</td>
+      <td> <img src="{{sp.urlImage}}" alt="" width="120px"> </td>
+      <td>{{sp.tensp}}</td>
+      <td>{{sp.giasp | currency:'VND'}}</td>
+      <td>{{sp.ngay | date:'dd/MM/yyyy'}}</td>
+      <td>{{sp.starRate}}</td>
+    </tr>
+  </tbody>
+</table>

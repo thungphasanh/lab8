@@ -1,0 +1,41 @@
+<!-- <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td><img src="{{p.image}}" width="100px" height="100px"></td>
+            <td>{{p.title}}</td>
+            <td>{{p.price}}</td>
+        </tr>
+    </tbody>
+</table> -->
+    <div class="sp" *ngFor="let p of products">
+        <a href=""><img src="{{p.image}}" alt="" width="280px" height="220px"></a>
+        <div class="dow">
+            <p class="texts"><b>{{p.title}}</b></p>
+            <span class="product-sale">
+                <span>Giá cực sốc</span>
+            </span>
+            <p class="text-danger"><b>{{p.price}}</b> <br></p>
+            <input type="number" name="soluong" min="1" max="50">
+            <p hidden></p>
+            <button>Thêm Vào Giỏ Hàng</button>
+            <div class="installment texts">
+                <b>Trả góp 0%</b>
+            </div>
+        </div>
+    </div>
+<!-- @defer (on viewport) {
+<img src="https://picsum.photos/id/180/200/300">
+}
+@placeholder {
+<div>loading..</div>
+} -->

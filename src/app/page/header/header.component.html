@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs- target="#mynavbar">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="about">dt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="dashboard">sp</a>
+                </li>
+                <div style="color:white" class="d-flex dk" *ngIf="user!==null">
+                    {{"Xin chào "+user.email}} <button (click)="logOut()">Đăng Xuất</button>
+                </div>
+                <li class="nav-item dn">
+                    <a class="nav-link" routerLink="login">Đăng Nhập</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="signin">Đăng Ký</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="banner">
+    <img src="../../../assets/thiet-ke-banner-quang-cao-dep-chuyen-nghiep-6934.jpg" alt="" width="100%" height="250px">
+</div>

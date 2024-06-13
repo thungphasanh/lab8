@@ -1,0 +1,37 @@
+<h3> Sửa Sản Phẩm</h3>
+<a routerLink="/product">Danh sách Sản Phẩm</a>
+<form action="" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group mt-3">
+        <input type="text" name="title" ngModel #title="ngModel" required placeholder="Nhập Tên" class="form-control">
+        <div class="text-danger" *ngIf="title.invalid && (title.dirty || title.touched)">
+            Vui lòng nhập tên
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <input type="price" name="price" ngModel #price="ngModel" required price placeholder="Nhập Giá"
+            class="form-control">
+        <div class="text-danger" *ngIf="price.invalid && (price.dirty || price.touched)">
+            <div *ngIf="price.errors?.['required']">Vui lòng nhập price</div>
+            <div *ngIf="price.errors?.['price']">Vui lòng nhập đúng định dạng price</div>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        danh mục
+        <select name="id_dm" ngModel #id_dm="ngModel" class="form-control" >
+            <option value="1">iphone</option>
+            <option value="2">Samsung</option>
+        </select>
+        <div class="text-danger" *ngIf="id_dm.invalid && (id_dm.dirty || id_dm.touched)">
+            <div *ngIf="id_dm.errors?.['required']">Vui lòng chọn danh mục</div>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <input type="text" name="image" ngModel #image="ngModel" required placeholder="Nhập hình ảnh" class="form-control">
+        <div class="text-danger" *ngIf="image.invalid && (image.dirty || image.touched)">
+            Vui lòng nhập hình ảnh
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">sửa Sản Phẩm</button>
+    </div>
+</form>

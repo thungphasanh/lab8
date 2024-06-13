@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    height: auto;
+}
+.sp {
+    background-color: #fff;
+    margin: 2px;
+    display: inline-block;
+    width: 24.5% ;
+    height: auto;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(241, 232, 107);
+    border-radius: 5px;
+}
+.img{
+    height: 300px;
+    width: 100%;
+}
+.sp > .img-sp > a > img{
+    height: 100%;
+    width: 100%;
+}
+.sp > a > img:hover{
+    padding: 10px;
+}
